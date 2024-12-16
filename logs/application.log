@@ -1,0 +1,24 @@
+04:18:47.144 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+04:18:47.152 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.055 ms.
+04:19:09.153 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 1 finished.
+04:20:04.759 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+04:20:04.764 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.080 ms.
+04:20:27.417 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 1 finished.
+04:22:26.491 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+04:22:26.495 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.060 ms.
+04:22:47.701 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 1 finished.
+04:24:45.897 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+04:24:45.901 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.051 ms.
+04:25:11.984 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 1 finished.
+04:27:32.944 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+04:27:32.948 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.069 ms.
+04:27:33.849 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 1 finished.
+04:27:34.300 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 2 finished.
+04:27:34.738 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 3 finished.
+04:27:35.171 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 4 finished.
+04:27:35.616 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 5 finished.
+04:27:36.057 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 6 finished.
+04:27:36.510 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 7 finished.
+04:27:36.987 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 8 finished.
+04:27:37.441 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 9 finished.
+04:27:37.875 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 10 finished.

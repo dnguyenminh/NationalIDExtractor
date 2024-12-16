@@ -1,0 +1,715 @@
+15:42:07.971 [main] INFO  NationalIDProcessor - Starting National ID Processor
+15:42:08.130 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Loading model with Criteria:
+	Application: CV.OBJECT_DETECTION
+	Input: interface ai.djl.modality.cv.Image
+	Output: class ai.djl.modality.cv.output.DetectedObjects
+	Engine: MXNet
+	ArtifactId: object_detection_v2
+	Arguments: {"threshold":0.3}
+	No translator supplied
+
+15:42:08.168 [main] DEBUG ai.djl.engine.Engine - Registering EngineProvider: MXNet
+15:42:08.169 [main] DEBUG ai.djl.engine.Engine - Found default engine: MXNet
+15:42:11.247 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:mlp CV.IMAGE_CLASSIFICATION [
+	ai.djl.zoo/mlp/0.0.3/mlp {"dataset":"mnist"}
+]
+15:42:12.793 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:mlp
+15:42:12.793 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:resnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.zoo/resnet/0.0.2/resnetv1 {"layers":"50","flavor":"v1","dataset":"cifar10"}
+]
+15:42:13.501 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:resnet
+15:42:13.502 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:ssd CV.OBJECT_DETECTION [
+	ai.djl.zoo/ssd/0.0.2/ssd {"flavor":"tiny","dataset":"pikachu"}
+]
+15:42:13.508 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:ssd
+15:42:13.509 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:yolo CV.OBJECT_DETECTION [
+	ai.djl.mxnet/yolo/0.0.1/yolo {"dataset":"voc","version":"3","backbone":"darknet53","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_voc_416 {"dataset":"voc","version":"3","backbone":"darknet53","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_voc_320 {"dataset":"voc","version":"3","backbone":"mobilenet1.0","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_voc_41 {"dataset":"voc","version":"3","backbone":"mobilenet1.0","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_320 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_416 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_608 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"608"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_320 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_416 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_608 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"608"}
+]
+15:42:13.516 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:yolo
+15:42:13.516 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:ssd CV.OBJECT_DETECTION [
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_resnet50_v1_voc {"size":"512","backbone":"resnet50","flavor":"v1","dataset":"voc"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_vgg16_atrous_coco {"size":"512","backbone":"vgg16","flavor":"atrous","dataset":"coco"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_mobilenet1.0_voc {"size":"512","backbone":"mobilenet1.0","dataset":"voc"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_300_vgg16_atrous_voc {"size":"300","backbone":"vgg16","flavor":"atrous","dataset":"voc"}
+]
+15:42:13.518 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:ssd
+15:42:13.518 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:googlenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/googlenet/0.0.1/googlenet {"dataset":"imagenet"}
+]
+15:42:14.320 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:googlenet
+15:42:14.321 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:glove NLP.WORD_EMBEDDING [
+	ai.djl.mxnet/glove/0.0.2/glove {"dimensions":"50"}
+]
+15:42:15.137 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:glove
+15:42:15.137 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:darknet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/darknet/0.0.1/darknet53 {"layers":"53","flavor":"v3","dataset":"imagenet"}
+]
+15:42:15.956 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:darknet
+15:42:15.957 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:squeezenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/squeezenet/0.0.1/squeezenet1.0 {"flavor":"1.0","dataset":"imagenet"}
+]
+15:42:16.775 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:squeezenet
+15:42:16.775 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:bertqa NLP.QUESTION_ANSWER [
+	ai.djl.mxnet/bertqa/0.0.1/static_bert_qa {"backbone":"bert","dataset":"book_corpus_wiki_en_uncased"}
+]
+15:42:17.493 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:bertqa
+15:42:17.494 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:inceptionv3 CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/inceptionv3/0.0.1/inceptionv3 {"dataset":"imagenet"}
+]
+15:42:18.312 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:inceptionv3
+15:42:18.312 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mask_rcnn CV.INSTANCE_SEGMENTATION [
+	ai.djl.mxnet/mask_rcnn/0.0.1/mask_rcnn_resnet18_v1b_coco {"backbone":"resnet18","flavor":"v1b","dataset":"coco"}
+	ai.djl.mxnet/mask_rcnn/0.0.1/mask_rcnn_resnet101_v1d_coco {"backbone":"resnet101","flavor":"v1d","dataset":"coco"}
+]
+15:42:19.130 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mask_rcnn
+15:42:19.130 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mobilenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.25 {"flavor":"v1","multiplier":"0.25","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.5 {"flavor":"v1","multiplier":"0.5","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.75 {"flavor":"v1","multiplier":"0.75","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet1.0 {"flavor":"v1","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.25 {"flavor":"v2","multiplier":"0.25","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.5 {"flavor":"v2","multiplier":"0.5","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.75 {"flavor":"v2","multiplier":"0.75","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_1.0 {"flavor":"v2","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv3_small {"flavor":"v3_small","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv3_large {"flavor":"v3_large","multiplier":"1.0","dataset":"imagenet"}
+]
+15:42:20.178 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mobilenet
+15:42:20.178 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:senet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/senet/0.0.1/senet_154 {"layers":"154","dataset":"imagenet"}
+]
+15:42:20.972 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:senet
+15:42:20.972 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:alexnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/alexnet/0.0.1/alexnet {"dataset":"imagenet"}
+]
+15:42:21.720 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:alexnet
+15:42:21.720 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mlp CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/mlp/0.0.1/mlp {"dataset":"mnist"}
+]
+15:42:22.511 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mlp
+15:42:22.511 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:resnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/resnet/0.0.1/resnet18_v1 {"layers":"18","flavor":"v1","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet50_v2 {"layers":"50","flavor":"v2","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet101_v1 {"layers":"101","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet152_v1d {"layers":"152","flavor":"v1d","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet50_v1_cifar10 {"layers":"50","flavor":"v1","dataset":"cifar10"}
+]
+15:42:23.328 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:resnet
+15:42:23.328 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:simple_pose CV.POSE_ESTIMATION [
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet18_v1b {"backbone":"resnet18","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet50_v1b {"backbone":"resnet50","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet101_v1d {"backbone":"resnet101","flavor":"v1d","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet152_v1b {"backbone":"resnet152","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet152_v1d {"backbone":"resnet152","flavor":"v1d","dataset":"imagenet"}
+]
+15:42:24.252 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:simple_pose
+15:42:24.253 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:se_resnext CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/se_resnext/0.0.1/se_resnext101_32x4d {"layers":"101","flavor":"32x4d","dataset":"imagenet"}
+	ai.djl.mxnet/se_resnext/0.0.1/se_resnext101_64x4d {"layers":"101","flavor":"64x4d","dataset":"imagenet"}
+]
+15:42:25.013 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:se_resnext
+15:42:25.014 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:vgg CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/vgg/0.0.1/vgg11 {"layers":"11","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg13 {"layers":"13","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg16 {"layers":"16","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg19 {"layers":"19","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg11_bn {"flavor":"batch_norm","layers":"11","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg13_bn {"flavor":"batch_norm","layers":"13","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg16_bn {"flavor":"batch_norm","layers":"16","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg19_bn {"flavor":"batch_norm","layers":"19","dataset":"imagenet"}
+]
+15:42:25.893 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:vgg
+15:42:25.893 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:densenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/densenet/0.0.1/densenet121 {"layers":"121","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet161 {"layers":"161","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet169 {"layers":"169","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet201 {"layers":"201","dataset":"imagenet"}
+]
+15:42:26.708 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:densenet
+15:42:26.708 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:xception CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/xception/0.0.1/xception {"flavor":"65","dataset":"imagenet"}
+]
+15:42:27.526 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:xception
+15:42:27.527 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:deepar TIMESERIES.FORECASTING [
+	ai.djl.mxnet/deepar/0.0.1/airpassengers {"dataset":"airpassengers"}
+	ai.djl.mxnet/deepar/0.0.1/m5forecast {"dataset":"m5forecast"}
+]
+15:42:28.448 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:deepar
+15:42:28.449 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:resnest CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/resnest/0.0.1/resnest14 {"layers":"14","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest26 {"layers":"26","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest50 {"layers":"50","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest101 {"layers":"101","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest200 {"layers":"200","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest269 {"layers":"269","dataset":"imagenet"}
+]
+15:42:29.269 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:resnest
+15:42:29.269 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:action_recognition CV.ACTION_RECOGNITION [
+	ai.djl.mxnet/action_recognition/0.0.1/vgg16_ucf101 {"backbone":"vgg16","dataset":"ucf101"}
+	ai.djl.mxnet/action_recognition/0.0.1/inceptionv3_ucf101 {"backbone":"inceptionv3","dataset":"ucf101"}
+]
+15:42:29.984 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:action_recognition
+15:42:29.984 [main] ERROR NationalIDProcessor - Model not found
+ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at ai.djl.repository.zoo.Criteria.resolveModelLoaders(Criteria.java:446)
+	at ai.djl.repository.zoo.Criteria.loadModel(Criteria.java:144)
+	at ai.djl.repository.zoo.ModelZoo.loadModel(ModelZoo.java:180)
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:78)
+	at NationalIDProcessor.main(NationalIDProcessor.java:36)
+15:42:29.988 [main] ERROR NationalIDProcessor - An error occurred during processing
+java.lang.RuntimeException: ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:92)
+	at NationalIDProcessor.main(NationalIDProcessor.java:36)
+Caused by: ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at ai.djl.repository.zoo.Criteria.resolveModelLoaders(Criteria.java:446)
+	at ai.djl.repository.zoo.Criteria.loadModel(Criteria.java:144)
+	at ai.djl.repository.zoo.ModelZoo.loadModel(ModelZoo.java:180)
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:78)
+	... 1 common frames omitted
+15:42:29.988 [main] INFO  NationalIDProcessor - Processed national ID saved successfully.
+15:49:46.995 [main] INFO  NationalIDProcessor - Starting National ID Processor
+15:51:02.984 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Loading model with Criteria:
+	Application: CV.OBJECT_DETECTION
+	Input: interface ai.djl.modality.cv.Image
+	Output: class ai.djl.modality.cv.output.DetectedObjects
+	Engine: MXNet
+	ArtifactId: object_detection_v2
+	Arguments: {"threshold":0.3}
+	No translator supplied
+
+15:51:03.003 [main] DEBUG ai.djl.engine.Engine - Registering EngineProvider: MXNet
+15:51:03.004 [main] DEBUG ai.djl.engine.Engine - Found default engine: MXNet
+15:51:06.096 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:mlp CV.IMAGE_CLASSIFICATION [
+	ai.djl.zoo/mlp/0.0.3/mlp {"dataset":"mnist"}
+]
+15:51:06.127 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:mlp
+15:51:06.127 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:resnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.zoo/resnet/0.0.2/resnetv1 {"layers":"50","flavor":"v1","dataset":"cifar10"}
+]
+15:51:06.130 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:resnet
+15:51:06.130 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:ssd CV.OBJECT_DETECTION [
+	ai.djl.zoo/ssd/0.0.2/ssd {"flavor":"tiny","dataset":"pikachu"}
+]
+15:51:06.134 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:ssd
+15:51:06.135 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:yolo CV.OBJECT_DETECTION [
+	ai.djl.mxnet/yolo/0.0.1/yolo {"dataset":"voc","version":"3","backbone":"darknet53","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_voc_416 {"dataset":"voc","version":"3","backbone":"darknet53","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_voc_320 {"dataset":"voc","version":"3","backbone":"mobilenet1.0","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_voc_41 {"dataset":"voc","version":"3","backbone":"mobilenet1.0","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_320 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_416 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_608 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"608"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_320 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_416 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_608 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"608"}
+]
+15:51:06.148 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:yolo
+15:51:06.148 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:ssd CV.OBJECT_DETECTION [
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_resnet50_v1_voc {"size":"512","backbone":"resnet50","flavor":"v1","dataset":"voc"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_vgg16_atrous_coco {"size":"512","backbone":"vgg16","flavor":"atrous","dataset":"coco"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_mobilenet1.0_voc {"size":"512","backbone":"mobilenet1.0","dataset":"voc"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_300_vgg16_atrous_voc {"size":"300","backbone":"vgg16","flavor":"atrous","dataset":"voc"}
+]
+15:51:06.155 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:ssd
+15:51:06.155 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:googlenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/googlenet/0.0.1/googlenet {"dataset":"imagenet"}
+]
+15:51:06.157 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:googlenet
+15:51:06.158 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:glove NLP.WORD_EMBEDDING [
+	ai.djl.mxnet/glove/0.0.2/glove {"dimensions":"50"}
+]
+15:51:06.161 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:glove
+15:51:06.161 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:darknet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/darknet/0.0.1/darknet53 {"layers":"53","flavor":"v3","dataset":"imagenet"}
+]
+15:51:06.163 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:darknet
+15:51:06.164 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:squeezenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/squeezenet/0.0.1/squeezenet1.0 {"flavor":"1.0","dataset":"imagenet"}
+]
+15:51:06.166 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:squeezenet
+15:51:06.167 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:bertqa NLP.QUESTION_ANSWER [
+	ai.djl.mxnet/bertqa/0.0.1/static_bert_qa {"backbone":"bert","dataset":"book_corpus_wiki_en_uncased"}
+]
+15:51:06.169 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:bertqa
+15:51:06.169 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:inceptionv3 CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/inceptionv3/0.0.1/inceptionv3 {"dataset":"imagenet"}
+]
+15:51:06.172 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:inceptionv3
+15:51:06.172 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mask_rcnn CV.INSTANCE_SEGMENTATION [
+	ai.djl.mxnet/mask_rcnn/0.0.1/mask_rcnn_resnet18_v1b_coco {"backbone":"resnet18","flavor":"v1b","dataset":"coco"}
+	ai.djl.mxnet/mask_rcnn/0.0.1/mask_rcnn_resnet101_v1d_coco {"backbone":"resnet101","flavor":"v1d","dataset":"coco"}
+]
+15:51:06.175 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mask_rcnn
+15:51:06.175 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mobilenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.25 {"flavor":"v1","multiplier":"0.25","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.5 {"flavor":"v1","multiplier":"0.5","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.75 {"flavor":"v1","multiplier":"0.75","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet1.0 {"flavor":"v1","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.25 {"flavor":"v2","multiplier":"0.25","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.5 {"flavor":"v2","multiplier":"0.5","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.75 {"flavor":"v2","multiplier":"0.75","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_1.0 {"flavor":"v2","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv3_small {"flavor":"v3_small","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv3_large {"flavor":"v3_large","multiplier":"1.0","dataset":"imagenet"}
+]
+15:51:06.183 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mobilenet
+15:51:06.183 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:senet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/senet/0.0.1/senet_154 {"layers":"154","dataset":"imagenet"}
+]
+15:51:06.185 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:senet
+15:51:06.186 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:alexnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/alexnet/0.0.1/alexnet {"dataset":"imagenet"}
+]
+15:51:06.188 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:alexnet
+15:51:06.189 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mlp CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/mlp/0.0.1/mlp {"dataset":"mnist"}
+]
+15:51:06.195 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mlp
+15:51:06.196 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:resnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/resnet/0.0.1/resnet18_v1 {"layers":"18","flavor":"v1","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet50_v2 {"layers":"50","flavor":"v2","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet101_v1 {"layers":"101","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet152_v1d {"layers":"152","flavor":"v1d","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet50_v1_cifar10 {"layers":"50","flavor":"v1","dataset":"cifar10"}
+]
+15:51:06.200 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:resnet
+15:51:06.201 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:simple_pose CV.POSE_ESTIMATION [
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet18_v1b {"backbone":"resnet18","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet50_v1b {"backbone":"resnet50","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet101_v1d {"backbone":"resnet101","flavor":"v1d","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet152_v1b {"backbone":"resnet152","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet152_v1d {"backbone":"resnet152","flavor":"v1d","dataset":"imagenet"}
+]
+15:51:06.205 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:simple_pose
+15:51:06.206 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:se_resnext CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/se_resnext/0.0.1/se_resnext101_32x4d {"layers":"101","flavor":"32x4d","dataset":"imagenet"}
+	ai.djl.mxnet/se_resnext/0.0.1/se_resnext101_64x4d {"layers":"101","flavor":"64x4d","dataset":"imagenet"}
+]
+15:51:06.209 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:se_resnext
+15:51:06.209 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:vgg CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/vgg/0.0.1/vgg11 {"layers":"11","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg13 {"layers":"13","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg16 {"layers":"16","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg19 {"layers":"19","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg11_bn {"flavor":"batch_norm","layers":"11","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg13_bn {"flavor":"batch_norm","layers":"13","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg16_bn {"flavor":"batch_norm","layers":"16","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg19_bn {"flavor":"batch_norm","layers":"19","dataset":"imagenet"}
+]
+15:51:06.215 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:vgg
+15:51:06.216 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:densenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/densenet/0.0.1/densenet121 {"layers":"121","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet161 {"layers":"161","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet169 {"layers":"169","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet201 {"layers":"201","dataset":"imagenet"}
+]
+15:51:06.220 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:densenet
+15:51:06.220 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:xception CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/xception/0.0.1/xception {"flavor":"65","dataset":"imagenet"}
+]
+15:51:06.223 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:xception
+15:51:06.223 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:deepar TIMESERIES.FORECASTING [
+	ai.djl.mxnet/deepar/0.0.1/airpassengers {"dataset":"airpassengers"}
+	ai.djl.mxnet/deepar/0.0.1/m5forecast {"dataset":"m5forecast"}
+]
+15:51:06.225 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:deepar
+15:51:06.226 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:resnest CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/resnest/0.0.1/resnest14 {"layers":"14","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest26 {"layers":"26","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest50 {"layers":"50","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest101 {"layers":"101","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest200 {"layers":"200","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest269 {"layers":"269","dataset":"imagenet"}
+]
+15:51:06.231 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:resnest
+15:51:06.232 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:action_recognition CV.ACTION_RECOGNITION [
+	ai.djl.mxnet/action_recognition/0.0.1/vgg16_ucf101 {"backbone":"vgg16","dataset":"ucf101"}
+	ai.djl.mxnet/action_recognition/0.0.1/inceptionv3_ucf101 {"backbone":"inceptionv3","dataset":"ucf101"}
+]
+15:51:06.235 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:action_recognition
+16:00:04.027 [main] ERROR NationalIDProcessor - Model not found
+ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at ai.djl.repository.zoo.Criteria.resolveModelLoaders(Criteria.java:446)
+	at ai.djl.repository.zoo.Criteria.loadModel(Criteria.java:144)
+	at ai.djl.repository.zoo.ModelZoo.loadModel(ModelZoo.java:180)
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:78)
+	at NationalIDProcessor.main(NationalIDProcessor.java:36)
+16:00:04.041 [main] ERROR NationalIDProcessor - An error occurred during processing
+java.lang.RuntimeException: ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:92)
+	at NationalIDProcessor.main(NationalIDProcessor.java:36)
+Caused by: ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at ai.djl.repository.zoo.Criteria.resolveModelLoaders(Criteria.java:446)
+	at ai.djl.repository.zoo.Criteria.loadModel(Criteria.java:144)
+	at ai.djl.repository.zoo.ModelZoo.loadModel(ModelZoo.java:180)
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:78)
+	... 1 common frames omitted
+16:00:04.041 [main] INFO  NationalIDProcessor - Processed national ID saved successfully.
+16:00:06.994 [main] INFO  NationalIDProcessor - Starting National ID Processor
+16:00:19.679 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Loading model with Criteria:
+	Application: CV.OBJECT_DETECTION
+	Input: interface ai.djl.modality.cv.Image
+	Output: class ai.djl.modality.cv.output.DetectedObjects
+	Engine: MXNet
+	ArtifactId: ssd_512_resnet50_v1_voc
+	Arguments: {"threshold":0.3}
+	No translator supplied
+
+16:00:19.702 [main] DEBUG ai.djl.engine.Engine - Registering EngineProvider: MXNet
+16:00:19.703 [main] DEBUG ai.djl.engine.Engine - Found default engine: MXNet
+16:00:22.832 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:mlp CV.IMAGE_CLASSIFICATION [
+	ai.djl.zoo/mlp/0.0.3/mlp {"dataset":"mnist"}
+]
+16:00:22.873 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:mlp
+16:00:22.874 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:resnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.zoo/resnet/0.0.2/resnetv1 {"layers":"50","flavor":"v1","dataset":"cifar10"}
+]
+16:00:22.877 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:resnet
+16:00:22.877 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.zoo:ssd CV.OBJECT_DETECTION [
+	ai.djl.zoo/ssd/0.0.2/ssd {"flavor":"tiny","dataset":"pikachu"}
+]
+16:00:22.881 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.zoo:ssd
+16:00:22.881 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:yolo CV.OBJECT_DETECTION [
+	ai.djl.mxnet/yolo/0.0.1/yolo {"dataset":"voc","version":"3","backbone":"darknet53","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_voc_416 {"dataset":"voc","version":"3","backbone":"darknet53","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_voc_320 {"dataset":"voc","version":"3","backbone":"mobilenet1.0","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_voc_41 {"dataset":"voc","version":"3","backbone":"mobilenet1.0","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_320 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_416 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_608 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"608"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_320 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_416 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_608 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"608"}
+]
+16:00:22.894 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:yolo
+16:00:22.895 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:ssd CV.OBJECT_DETECTION [
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_resnet50_v1_voc {"size":"512","backbone":"resnet50","flavor":"v1","dataset":"voc"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_vgg16_atrous_coco {"size":"512","backbone":"vgg16","flavor":"atrous","dataset":"coco"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_mobilenet1.0_voc {"size":"512","backbone":"mobilenet1.0","dataset":"voc"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_300_vgg16_atrous_voc {"size":"300","backbone":"vgg16","flavor":"atrous","dataset":"voc"}
+]
+16:00:22.902 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:ssd
+16:00:22.902 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:googlenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/googlenet/0.0.1/googlenet {"dataset":"imagenet"}
+]
+16:00:22.905 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:googlenet
+16:00:22.905 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:glove NLP.WORD_EMBEDDING [
+	ai.djl.mxnet/glove/0.0.2/glove {"dimensions":"50"}
+]
+16:00:22.908 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:glove
+16:00:22.908 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:darknet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/darknet/0.0.1/darknet53 {"layers":"53","flavor":"v3","dataset":"imagenet"}
+]
+16:00:22.910 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:darknet
+16:00:22.911 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:squeezenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/squeezenet/0.0.1/squeezenet1.0 {"flavor":"1.0","dataset":"imagenet"}
+]
+16:00:22.914 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:squeezenet
+16:00:22.914 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:bertqa NLP.QUESTION_ANSWER [
+	ai.djl.mxnet/bertqa/0.0.1/static_bert_qa {"backbone":"bert","dataset":"book_corpus_wiki_en_uncased"}
+]
+16:00:22.916 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:bertqa
+16:00:22.917 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:inceptionv3 CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/inceptionv3/0.0.1/inceptionv3 {"dataset":"imagenet"}
+]
+16:00:22.919 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:inceptionv3
+16:00:22.920 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mask_rcnn CV.INSTANCE_SEGMENTATION [
+	ai.djl.mxnet/mask_rcnn/0.0.1/mask_rcnn_resnet18_v1b_coco {"backbone":"resnet18","flavor":"v1b","dataset":"coco"}
+	ai.djl.mxnet/mask_rcnn/0.0.1/mask_rcnn_resnet101_v1d_coco {"backbone":"resnet101","flavor":"v1d","dataset":"coco"}
+]
+16:00:22.923 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mask_rcnn
+16:00:22.923 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mobilenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.25 {"flavor":"v1","multiplier":"0.25","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.5 {"flavor":"v1","multiplier":"0.5","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.75 {"flavor":"v1","multiplier":"0.75","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet1.0 {"flavor":"v1","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.25 {"flavor":"v2","multiplier":"0.25","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.5 {"flavor":"v2","multiplier":"0.5","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.75 {"flavor":"v2","multiplier":"0.75","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_1.0 {"flavor":"v2","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv3_small {"flavor":"v3_small","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv3_large {"flavor":"v3_large","multiplier":"1.0","dataset":"imagenet"}
+]
+16:00:22.930 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mobilenet
+16:00:22.931 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:senet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/senet/0.0.1/senet_154 {"layers":"154","dataset":"imagenet"}
+]
+16:00:22.933 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:senet
+16:00:22.934 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:alexnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/alexnet/0.0.1/alexnet {"dataset":"imagenet"}
+]
+16:00:22.936 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:alexnet
+16:00:22.937 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mlp CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/mlp/0.0.1/mlp {"dataset":"mnist"}
+]
+16:00:22.943 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mlp
+16:00:22.944 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:resnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/resnet/0.0.1/resnet18_v1 {"layers":"18","flavor":"v1","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet50_v2 {"layers":"50","flavor":"v2","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet101_v1 {"layers":"101","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet152_v1d {"layers":"152","flavor":"v1d","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet50_v1_cifar10 {"layers":"50","flavor":"v1","dataset":"cifar10"}
+]
+16:00:22.949 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:resnet
+16:00:22.949 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:simple_pose CV.POSE_ESTIMATION [
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet18_v1b {"backbone":"resnet18","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet50_v1b {"backbone":"resnet50","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet101_v1d {"backbone":"resnet101","flavor":"v1d","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet152_v1b {"backbone":"resnet152","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet152_v1d {"backbone":"resnet152","flavor":"v1d","dataset":"imagenet"}
+]
+16:00:22.954 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:simple_pose
+16:00:22.954 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:se_resnext CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/se_resnext/0.0.1/se_resnext101_32x4d {"layers":"101","flavor":"32x4d","dataset":"imagenet"}
+	ai.djl.mxnet/se_resnext/0.0.1/se_resnext101_64x4d {"layers":"101","flavor":"64x4d","dataset":"imagenet"}
+]
+16:00:22.957 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:se_resnext
+16:00:22.957 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:vgg CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/vgg/0.0.1/vgg11 {"layers":"11","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg13 {"layers":"13","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg16 {"layers":"16","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg19 {"layers":"19","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg11_bn {"flavor":"batch_norm","layers":"11","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg13_bn {"flavor":"batch_norm","layers":"13","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg16_bn {"flavor":"batch_norm","layers":"16","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg19_bn {"flavor":"batch_norm","layers":"19","dataset":"imagenet"}
+]
+16:00:22.964 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:vgg
+16:00:22.964 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:densenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/densenet/0.0.1/densenet121 {"layers":"121","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet161 {"layers":"161","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet169 {"layers":"169","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet201 {"layers":"201","dataset":"imagenet"}
+]
+16:00:22.968 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:densenet
+16:00:22.968 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:xception CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/xception/0.0.1/xception {"flavor":"65","dataset":"imagenet"}
+]
+16:00:22.970 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:xception
+16:00:22.971 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:deepar TIMESERIES.FORECASTING [
+	ai.djl.mxnet/deepar/0.0.1/airpassengers {"dataset":"airpassengers"}
+	ai.djl.mxnet/deepar/0.0.1/m5forecast {"dataset":"m5forecast"}
+]
+16:00:22.974 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:deepar
+16:00:22.974 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:resnest CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/resnest/0.0.1/resnest14 {"layers":"14","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest26 {"layers":"26","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest50 {"layers":"50","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest101 {"layers":"101","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest200 {"layers":"200","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest269 {"layers":"269","dataset":"imagenet"}
+]
+16:00:22.979 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:resnest
+16:00:22.979 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:action_recognition CV.ACTION_RECOGNITION [
+	ai.djl.mxnet/action_recognition/0.0.1/vgg16_ucf101 {"backbone":"vgg16","dataset":"ucf101"}
+	ai.djl.mxnet/action_recognition/0.0.1/inceptionv3_ucf101 {"backbone":"inceptionv3","dataset":"ucf101"}
+]
+16:00:22.982 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:action_recognition
+16:35:24.490 [main] ERROR NationalIDProcessor - Model not found
+ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at ai.djl.repository.zoo.Criteria.resolveModelLoaders(Criteria.java:446)
+	at ai.djl.repository.zoo.Criteria.loadModel(Criteria.java:144)
+	at ai.djl.repository.zoo.ModelZoo.loadModel(ModelZoo.java:180)
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:78)
+	at NationalIDProcessor.main(NationalIDProcessor.java:36)
+16:35:24.500 [main] ERROR NationalIDProcessor - An error occurred during processing
+java.lang.RuntimeException: ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:92)
+	at NationalIDProcessor.main(NationalIDProcessor.java:36)
+Caused by: ai.djl.repository.zoo.ModelNotFoundException: No model matching the criteria is found.
+	at ai.djl.repository.zoo.Criteria.resolveModelLoaders(Criteria.java:446)
+	at ai.djl.repository.zoo.Criteria.loadModel(Criteria.java:144)
+	at ai.djl.repository.zoo.ModelZoo.loadModel(ModelZoo.java:180)
+	at NationalIDProcessor.detectNationalID(NationalIDProcessor.java:78)
+	... 1 common frames omitted
+16:35:24.500 [main] INFO  NationalIDProcessor - Processed national ID saved successfully.
+16:35:27.300 [main] INFO  NationalIDProcessor - Starting National ID Processor
+16:35:36.064 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Loading model with Criteria:
+	Application: CV.OBJECT_DETECTION
+	Input: interface ai.djl.modality.cv.Image
+	Output: class ai.djl.modality.cv.output.DetectedObjects
+	GroupID: ai.djl.mxnet
+	ArtifactId: ssd
+	Filter: {"flavor":"v1","size":"512","backbone":"resnet50","dataset":"voc"}
+	No translator supplied
+
+16:35:36.069 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Ignore ModelZoo ai.djl.zoo by groupId: ai.djl.mxnet
+16:35:36.070 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Ignore ModelZoo ai.djl.localmodelzoo by groupId: ai.djl.mxnet
+16:35:36.070 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:yolo CV.OBJECT_DETECTION [
+	ai.djl.mxnet/yolo/0.0.1/yolo {"dataset":"voc","version":"3","backbone":"darknet53","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_voc_416 {"dataset":"voc","version":"3","backbone":"darknet53","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_voc_320 {"dataset":"voc","version":"3","backbone":"mobilenet1.0","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_voc_41 {"dataset":"voc","version":"3","backbone":"mobilenet1.0","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_320 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_416 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_darknet_coco_608 {"dataset":"coco","version":"3","backbone":"darknet53","imageSize":"608"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_320 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"320"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_416 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"416"}
+	ai.djl.mxnet/yolo/0.0.1/yolo3_mobilenet_coco_608 {"dataset":"coco","version":"3","backbone":"mobilenet1.0","imageSize":"608"}
+]
+16:35:36.112 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:yolo
+16:35:36.113 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:ssd CV.OBJECT_DETECTION [
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_resnet50_v1_voc {"size":"512","backbone":"resnet50","flavor":"v1","dataset":"voc"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_vgg16_atrous_coco {"size":"512","backbone":"vgg16","flavor":"atrous","dataset":"coco"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_512_mobilenet1.0_voc {"size":"512","backbone":"mobilenet1.0","dataset":"voc"}
+	ai.djl.mxnet/ssd/0.0.1/ssd_300_vgg16_atrous_voc {"size":"300","backbone":"vgg16","flavor":"atrous","dataset":"voc"}
+]
+16:35:36.118 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:googlenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/googlenet/0.0.1/googlenet {"dataset":"imagenet"}
+]
+16:35:36.121 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:googlenet
+16:35:36.121 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:glove NLP.WORD_EMBEDDING [
+	ai.djl.mxnet/glove/0.0.2/glove {"dimensions":"50"}
+]
+16:35:36.126 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:glove
+16:35:36.127 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:darknet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/darknet/0.0.1/darknet53 {"layers":"53","flavor":"v3","dataset":"imagenet"}
+]
+16:35:36.130 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:darknet
+16:35:36.130 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:squeezenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/squeezenet/0.0.1/squeezenet1.0 {"flavor":"1.0","dataset":"imagenet"}
+]
+16:35:36.133 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:squeezenet
+16:35:36.133 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:bertqa NLP.QUESTION_ANSWER [
+	ai.djl.mxnet/bertqa/0.0.1/static_bert_qa {"backbone":"bert","dataset":"book_corpus_wiki_en_uncased"}
+]
+16:35:36.135 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:bertqa
+16:35:36.136 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:inceptionv3 CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/inceptionv3/0.0.1/inceptionv3 {"dataset":"imagenet"}
+]
+16:35:36.139 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:inceptionv3
+16:35:36.139 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mask_rcnn CV.INSTANCE_SEGMENTATION [
+	ai.djl.mxnet/mask_rcnn/0.0.1/mask_rcnn_resnet18_v1b_coco {"backbone":"resnet18","flavor":"v1b","dataset":"coco"}
+	ai.djl.mxnet/mask_rcnn/0.0.1/mask_rcnn_resnet101_v1d_coco {"backbone":"resnet101","flavor":"v1d","dataset":"coco"}
+]
+16:35:36.142 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mask_rcnn
+16:35:36.142 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mobilenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.25 {"flavor":"v1","multiplier":"0.25","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.5 {"flavor":"v1","multiplier":"0.5","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet0.75 {"flavor":"v1","multiplier":"0.75","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenet1.0 {"flavor":"v1","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.25 {"flavor":"v2","multiplier":"0.25","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.5 {"flavor":"v2","multiplier":"0.5","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_0.75 {"flavor":"v2","multiplier":"0.75","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv2_1.0 {"flavor":"v2","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv3_small {"flavor":"v3_small","multiplier":"1.0","dataset":"imagenet"}
+	ai.djl.mxnet/mobilenet/0.0.1/mobilenetv3_large {"flavor":"v3_large","multiplier":"1.0","dataset":"imagenet"}
+]
+16:35:36.150 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mobilenet
+16:35:36.151 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:senet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/senet/0.0.1/senet_154 {"layers":"154","dataset":"imagenet"}
+]
+16:35:36.154 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:senet
+16:35:36.154 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:alexnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/alexnet/0.0.1/alexnet {"dataset":"imagenet"}
+]
+16:35:36.156 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:alexnet
+16:35:36.157 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:mlp CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/mlp/0.0.1/mlp {"dataset":"mnist"}
+]
+16:35:36.159 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:mlp
+16:35:36.160 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:resnet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/resnet/0.0.1/resnet18_v1 {"layers":"18","flavor":"v1","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet50_v2 {"layers":"50","flavor":"v2","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet101_v1 {"layers":"101","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet152_v1d {"layers":"152","flavor":"v1d","dataset":"imagenet"}
+	ai.djl.mxnet/resnet/0.0.1/resnet50_v1_cifar10 {"layers":"50","flavor":"v1","dataset":"cifar10"}
+]
+16:35:36.164 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:resnet
+16:35:36.165 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:simple_pose CV.POSE_ESTIMATION [
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet18_v1b {"backbone":"resnet18","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet50_v1b {"backbone":"resnet50","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet101_v1d {"backbone":"resnet101","flavor":"v1d","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet152_v1b {"backbone":"resnet152","flavor":"v1b","dataset":"imagenet"}
+	ai.djl.mxnet/simple_pose/0.0.1/simple_pose_resnet152_v1d {"backbone":"resnet152","flavor":"v1d","dataset":"imagenet"}
+]
+16:35:36.170 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:simple_pose
+16:35:36.170 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:se_resnext CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/se_resnext/0.0.1/se_resnext101_32x4d {"layers":"101","flavor":"32x4d","dataset":"imagenet"}
+	ai.djl.mxnet/se_resnext/0.0.1/se_resnext101_64x4d {"layers":"101","flavor":"64x4d","dataset":"imagenet"}
+]
+16:35:36.177 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:se_resnext
+16:35:36.178 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:vgg CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/vgg/0.0.1/vgg11 {"layers":"11","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg13 {"layers":"13","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg16 {"layers":"16","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg19 {"layers":"19","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg11_bn {"flavor":"batch_norm","layers":"11","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg13_bn {"flavor":"batch_norm","layers":"13","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg16_bn {"flavor":"batch_norm","layers":"16","dataset":"imagenet"}
+	ai.djl.mxnet/vgg/0.0.1/vgg19_bn {"flavor":"batch_norm","layers":"19","dataset":"imagenet"}
+]
+16:35:36.185 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:vgg
+16:35:36.185 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:densenet CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/densenet/0.0.1/densenet121 {"layers":"121","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet161 {"layers":"161","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet169 {"layers":"169","dataset":"imagenet"}
+	ai.djl.mxnet/densenet/0.0.1/densenet201 {"layers":"201","dataset":"imagenet"}
+]
+16:35:36.190 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:densenet
+16:35:36.191 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:xception CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/xception/0.0.1/xception {"flavor":"65","dataset":"imagenet"}
+]
+16:35:36.194 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:xception
+16:35:36.194 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:deepar TIMESERIES.FORECASTING [
+	ai.djl.mxnet/deepar/0.0.1/airpassengers {"dataset":"airpassengers"}
+	ai.djl.mxnet/deepar/0.0.1/m5forecast {"dataset":"m5forecast"}
+]
+16:35:36.197 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:deepar
+16:35:36.197 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:resnest CV.IMAGE_CLASSIFICATION [
+	ai.djl.mxnet/resnest/0.0.1/resnest14 {"layers":"14","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest26 {"layers":"26","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest50 {"layers":"50","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest101 {"layers":"101","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest200 {"layers":"200","dataset":"imagenet"}
+	ai.djl.mxnet/resnest/0.0.1/resnest269 {"layers":"269","dataset":"imagenet"}
+]
+16:35:36.202 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:resnest
+16:35:36.203 [main] DEBUG ai.djl.repository.zoo.ModelZoo - Checking ModelLoader: ai.djl.mxnet:action_recognition CV.ACTION_RECOGNITION [
+	ai.djl.mxnet/action_recognition/0.0.1/vgg16_ucf101 {"backbone":"vgg16","dataset":"ucf101"}
+	ai.djl.mxnet/action_recognition/0.0.1/inceptionv3_ucf101 {"backbone":"inceptionv3","dataset":"ucf101"}
+]
+16:35:36.206 [main] DEBUG ai.djl.repository.zoo.ModelZoo - artifactId mismatch for ModelLoader: ai.djl.mxnet:action_recognition
+16:35:36.228 [main] DEBUG ai.djl.repository.MRL - Preparing artifact: MXNet, ai.djl.mxnet/ssd/0.0.1/ssd_512_resnet50_v1_voc {"size":"512","backbone":"resnet50","flavor":"v1","dataset":"voc"}
+16:35:36.230 [main] DEBUG a.djl.repository.AbstractRepository - Files have been downloaded already: /home/ducnguyen/.djl.ai/cache/repo/model/cv/object_detection/ai/djl/mxnet/ssd/0.0.1/ssd_512_resnet50_v1_voc
+16:35:36.249 [main] DEBUG ai.djl.engine.Engine - Registering EngineProvider: MXNet
+16:35:36.249 [main] DEBUG ai.djl.engine.Engine - Found default engine: MXNet
+16:35:39.682 [main] DEBUG ai.djl.mxnet.jna.LibUtils - Using cache dir: /home/ducnguyen/.djl.ai/mxnet/1.9.1-mkl-linux-x86_64
+16:35:39.683 [main] DEBUG ai.djl.mxnet.jna.LibUtils - Loading mxnet library from: /home/ducnguyen/.djl.ai/mxnet/1.9.1-mkl-linux-x86_64/libmxnet.so
+16:35:40.635 [main] DEBUG ai.djl.BaseModel - Try to load model from /home/ducnguyen/.djl.ai/cache/repo/model/cv/object_detection/ai/djl/mxnet/ssd/0.0.1/ssd_512_resnet50_v1_voc/ssd_512_resnet50_v1_voc-0000.params
+16:35:40.636 [main] DEBUG ai.djl.mxnet.engine.MxModel - DJL formatted model not found, try to find MXNet model
+16:35:40.771 [main] DEBUG ai.djl.mxnet.engine.MxModel - MXNet Model /home/ducnguyen/.djl.ai/cache/repo/model/cv/object_detection/ai/djl/mxnet/ssd/0.0.1/ssd_512_resnet50_v1_voc/ssd_512_resnet50_v1_voc-0000.params (float32) loaded successfully.
+16:38:10.154 [main] INFO  NationalIDProcessor - Detection Results:
+16:38:57.833 [main] WARN  NationalIDProcessor - No objects detected in the image. Please check if the image contains a national ID and if the model is appropriate for this task.
+16:39:46.369 [main] INFO  NationalIDProcessor - Starting National ID Processor
+16:39:50.376 [main] INFO  NationalIDProcessor - Detection Results:
+16:39:50.390 [main] WARN  NationalIDProcessor - No objects detected in the image. Please check if the image contains a national ID and if the model is appropriate for this task.
+19:37:44.268 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+19:37:44.272 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.078 ms.
+19:37:48.245 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 1 finished.
+19:37:51.588 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 2 finished.
+22:20:57.205 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+22:20:57.209 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.042 ms.
+22:22:58.813 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+22:22:58.818 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.070 ms.
+22:34:57.612 [main] INFO  a.d.t.l.LoggingTrainingListener - Training on: cpu().
+22:34:57.616 [main] INFO  a.d.t.l.LoggingTrainingListener - Load MXNet Engine Version 1.9.0 in 0.054 ms.
+22:35:19.764 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 1 finished.
+22:36:05.417 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 2 finished.
+22:36:38.360 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 3 finished.
+22:36:54.919 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 4 finished.
+22:37:38.554 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 5 finished.
+22:38:11.261 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 6 finished.
+22:38:28.976 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 7 finished.
+22:38:46.173 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 8 finished.
+22:39:00.850 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 9 finished.
+22:39:17.642 [main] INFO  a.d.t.l.LoggingTrainingListener - Epoch 10 finished.
